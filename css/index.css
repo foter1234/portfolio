@@ -1,0 +1,15 @@
+
+.card {
+    height: 200px;
+    width: 20%;
+    border-radius: 10px;
+    background-color: hsl(215, 32%, 27%);
+  }
+
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  p{
+    font-size:18px
+  }
