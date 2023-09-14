@@ -7,7 +7,7 @@ p{
     font-size:18px
   }
   .imaginaria{
-    margin-bottom:60%;
+    margin-top: 110%;
     
   }
 
@@ -57,19 +57,20 @@ nav > ul > li:hover > a {
 
 .principal1{
   margin-top: 5%;
-  margin-bottom: 25%;
   width: 100%;
+  background-color: #1f1f44
 }
   .principal1:hover .flipper{
     text-align: center;
     transform: rotateY(180deg);
+    transition: transform 1.5s;
  
   }
 
   .flipper{
     width: 100%;
     height: 100%;
-    transition: transform 1.3s;
+    transition: transform 1.7s;
     transform-style: preserve-3d;
   	position: relative;
 
