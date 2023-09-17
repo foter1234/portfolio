@@ -1,3 +1,16 @@
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(49, 49, 49);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(121, 121, 121);  /* creates padding around scroll thumb */
+}
+
 img {
   border-radius: 5px;
 }
@@ -87,12 +100,20 @@ nav > ul > li:hover > a {
   margin-top: 100%;
 }
 
-.habilidades, .nfts, .contatos {
+.habilidades {
   margin-top: 100%;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: 20px;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+.nfts{
+  margin-top: 50%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  margin-bottom: 10%;
   text-align: center;
 }
 
@@ -132,6 +153,33 @@ nav > ul > li:hover > a {
         max-height:  60%;
       }
     }
+
+    @media (min-width: 1800px) {
+
+      .card1, .back{
+
+        min-height:  1000px ;
+        max-height:  60%;
+      }
+    }
+
+    @media (min-width: 2100px) {
+
+      .card1, .back{
+
+        min-height:  1500px ;
+        max-height:  60%;
+      }
+    }
+    @media (min-width: 2300px) {
+
+      .card1, .back{
+
+        min-height:  2000px ;
+        max-height:  60%;
+      }
+    }
+
     .conteiner {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -146,7 +194,7 @@ nav > ul > li:hover > a {
       height: 254px;
       border-radius: 20px;
       transition: all 0.3s;
-      margin: 10px; /* Espaçamento entre os cards */
+      margin: 10px; 
     }
     
     .card2 .img {
@@ -170,32 +218,38 @@ nav > ul > li:hover > a {
       border-radius: 20px;
     }
     
-    /* Estilos para telas menores (por exemplo, quando a largura da tela for menor que 768px) */
+   
     @media screen and (max-width: 768px) {
       .conteiner {
-        grid-template-columns: repeat(2, 1fr); /* Reduzir para 2 colunas em telas menores */
-        margin-left: 5%; /* Reduzir a margem esquerda */
-        text-align: center; /* Centralizar o conteúdo */
+        grid-template-columns: repeat(2, 1fr); 
+        margin-left: 5%; 
+        text-align: center; 
       }
     
       .card2 {
-        width: calc(50% - 20px); /* 50% da largura menos o espaçamento entre os cards */
-        margin: 10px; /* Espaçamento entre os cards */
+        width: calc(50% - 20px); 
+        margin: 10px; 
       }
     }
     
-    /* Estilos para telas muito pequenas (por exemplo, quando a largura da tela for menor que 480px) */
+  
     @media screen and (max-width: 480px) {
+
       .conteiner {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
-        margin-left: 5%; /* Reduzir a margem esquerda */
-        text-align: center; /* Centralizar o conteúdo */
+        grid-template-columns: 1fr; 
+        margin-left: 20%; 
+        text-align: center;
       }
     
       .card2 {
-        width: 100%; /* Preencher a largura disponível */
-        margin: 10px; /* Espaçamento entre os cards */
-      }}
+        width: 100%; 
+        margin: 10px; 
+
+      }
+    .nfts{
+      margin-top: 150%;
+    }
+    }
  
 
  
@@ -243,3 +297,24 @@ nav > ul > li:hover > a {
      margin-right: 2%;
  }
 
+ .habilidade {
+  position: relative;
+  color: black;
+}
+
+ .habilidade::after {
+  content: "";
+  position: absolute;
+  left: 10;
+  bottom: 0;
+  width: 10;
+  height: 2px; /* Altura da barra */
+  background-color: #000; /* Cor da barra */
+  transform: scaleX(0); /* Inicialmente, a barra está invisível */
+  transform-origin: left;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.habilidade:hover::after {
+  transform: scaleX(1); /* Quando o mouse está sobre o elemento, a barra aparece */
+}
