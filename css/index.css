@@ -132,25 +132,22 @@ nav > ul > li:hover > a {
         max-height:  60%;
       }
     }
-
-
     .conteiner {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2%; 
-      justify-content: center; 
-      align-items: center; 
+      gap: 2%;
+      justify-content: center;
+      align-items: center;
       margin-left: 10%;
     }
-
-
+    
     .card2 {
       width: 190px;
       height: 254px;
       border-radius: 20px;
-      transition: all .3s;
-
-     }
+      transition: all 0.3s;
+      margin: 10px; /* Espaçamento entre os cards */
+    }
     
     .card2 .img {
       width: 70px;
@@ -158,22 +155,47 @@ nav > ul > li:hover > a {
       border-radius: 100%;
       margin: auto;
       margin-top: 20px;
-      margin-top: 20%;
     }
-
     
-.card22 {
-  width: 190px;
-  height: 254px;
-  background-color: #1a1a1a;
-  border-radius: 0;
-  transition: all .2s;
- }
- 
- .card22:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
- }
+    .card22 {
+      width: 190px;
+      height: 254px;
+      background-color: #1a1a1a;
+      border-radius: 0;
+      transition: all 0.2s;
+    }
+    
+    .card22:hover {
+      transform: scale(0.98);
+      border-radius: 20px;
+    }
+    
+    /* Estilos para telas menores (por exemplo, quando a largura da tela for menor que 768px) */
+    @media screen and (max-width: 768px) {
+      .conteiner {
+        grid-template-columns: repeat(2, 1fr); /* Reduzir para 2 colunas em telas menores */
+        margin-left: 5%; /* Reduzir a margem esquerda */
+        text-align: center; /* Centralizar o conteúdo */
+      }
+    
+      .card2 {
+        width: calc(50% - 20px); /* 50% da largura menos o espaçamento entre os cards */
+        margin: 10px; /* Espaçamento entre os cards */
+      }
+    }
+    
+    /* Estilos para telas muito pequenas (por exemplo, quando a largura da tela for menor que 480px) */
+    @media screen and (max-width: 480px) {
+      .conteiner {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        margin-left: 5%; /* Reduzir a margem esquerda */
+        text-align: center; /* Centralizar o conteúdo */
+      }
+    
+      .card2 {
+        width: 100%; /* Preencher a largura disponível */
+        margin: 10px; /* Espaçamento entre os cards */
+      }}
  
 
  
